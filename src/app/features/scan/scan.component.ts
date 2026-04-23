@@ -194,7 +194,7 @@ Load an example or upload a file to start →">
                   </button>
                 </div>
                 <div class="code-diff">
-                  @for (line of f.vuln.diffVuln.split('\n'); track $index; let li=$index) {
+                  @for (line of f.vuln.diffVuln.split('\n'); let li = $index; track li) {
                     <div class="diff-row vuln"><span class="diff-marker">−</span><span class="diff-ln">{{ f.lineNum+li }}</span>{{ line }}</div>
                   }
                   @for (line of f.vuln.diffFix.split('\n'); track $index) {
